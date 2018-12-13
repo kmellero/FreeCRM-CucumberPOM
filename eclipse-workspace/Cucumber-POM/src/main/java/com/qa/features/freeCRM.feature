@@ -26,6 +26,7 @@ Feature: free CRM application POM test
     Then user logs into app 
     Then validate home page title
     Then validate logged user name
+    Then browser down
 
 
 #  @tag2

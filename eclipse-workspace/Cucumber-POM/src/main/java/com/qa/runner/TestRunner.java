@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features="C:\\Users\\Hp\\eclipse-workspace\\Cucumber-POM\\src\\main\\java\\com\\qa\\features\\freeCRM.feature"   // \\.deals.feature " to run specific feature file
+		features="C:\\Users\\Hp\\eclipse-workspace\\Cucumber-POM\\src\\main\\java\\com\\qa\\features"   // \\freeCRM-ScOutline.feature to run specific feature file
 		,glue= {"com.qa.stepDefinitions"}  //package/folder for steps
 		,plugin= {"pretty","html:test-output", "junit:junit_xml\\cucumber.xml"}   //reporting formats e.g.: , "json:json_output\\cucumber.json"
 		,monochrome= true  //display the console output: readable format				

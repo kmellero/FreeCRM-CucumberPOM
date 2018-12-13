@@ -16,26 +16,16 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
+Feature: New Contact
 
-Feature: free CRM application POM test
+  Scenario Outline: free CRM app with parameters POM test
+    Given user logged in and is on home page
+    Then user hover over contacts link and clicks on New Contact link
+    Then user enters "<title>", "<fname>" , "<lname>" and "<comp>"
+    Then verify new contact "<fname>" and "<lname>" created
+    Then tear down
 
-
-  Scenario: validate Free CRM Home Page Test
-    Given user opens browser
-    Then user is on Login Page
-    Then user logs into app 
-    Then validate home page title
-    Then validate logged user name
-    Then browser down
-
-
-#  @tag2
-#  Scenario Outline: Title of your scenario outline
-#    Given I want to write a step with <name>
-#    When I check for the <value> in step
-#    Then I verify the <status> in step
-
-#    Examples: 
-#      | name  | value | status  |
-#      | name1 |     5 | success |
-#      | name2 |     7 | Fail    |
+    Examples: 
+      | title | fname | lname | comp |
+      | Mrs.  | ee1   | ff2   | gg3  |
+      | Dr.   | ee4   | ff5   | gg6  |

@@ -18,6 +18,7 @@ public class HomePageSteps extends TestBase{
 		TestBase.initialization();
 	}
 
+	@SuppressWarnings("deprecation")
 	@Then("^user is on Login Page$")
 	public void user_is_on_Login_Page() {
 		loginpage = new LoginPage();
@@ -46,5 +47,10 @@ public class HomePageSteps extends TestBase{
 		driver.switchTo().frame("mainpanel");  
 		boolean flag =  homepage.validateUserName();
 		Assert.assertTrue(flag);
+	}
+	
+	@Then("^browser down$")
+	public void browser_down() {
+		driver.quit();
 	}
 }
