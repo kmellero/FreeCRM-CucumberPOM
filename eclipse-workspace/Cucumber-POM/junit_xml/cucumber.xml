@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="71.988677">
-<testcase classname="New Contact" name="free CRM app with parameters POM test" time="25.871187">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="66.102773">
+<testcase classname="New Contact" name="free CRM app with parameters POM test" time="24.606122">
 <system-out><![CDATA[Given user logged in and is on home page....................................passed
 Then user hover over contacts link and clicks on New Contact link...........passed
 Then user enters "Mrs.", "ee1" , "ff2" and "gg3"............................passed
 Then verify new contact "ee1" and "ff2" created.............................passed
+Then delete new contact "ee1" and "ff2".....................................passed
 Then tear down..............................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="New Contact" name="free CRM app with parameters POM test 2" time="24.221269">
+<testcase classname="New Contact" name="free CRM app with parameters POM test 2" time="23.002649">
 <system-out><![CDATA[Given user logged in and is on home page....................................passed
 Then user hover over contacts link and clicks on New Contact link...........passed
 Then user enters "Dr.", "ee4" , "ff5" and "gg6".............................passed
 Then verify new contact "ee4" and "ff5" created.............................passed
+Then delete new contact "ee4" and "ff5".....................................passed
 Then tear down..............................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="free CRM application POM test" name="validate Free CRM Home Page Test" time="21.896221">
+<testcase classname="free CRM application POM test" name="validate Free CRM Home Page Test" time="18.494002">
 <system-out><![CDATA[Given user opens browser....................................................passed
 Then user is on Login Page..................................................passed
 Then user logs into app.....................................................passed

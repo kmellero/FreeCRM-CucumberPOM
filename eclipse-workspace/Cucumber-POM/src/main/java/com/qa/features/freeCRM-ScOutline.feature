@@ -23,6 +23,7 @@ Feature: New Contact
     Then user hover over contacts link and clicks on New Contact link
     Then user enters "<title>", "<fname>" , "<lname>" and "<comp>"
     Then verify new contact "<fname>" and "<lname>" created
+    Then delete new contact "<fname>" and "<lname>"
     Then tear down
 
     Examples: 

@@ -37,6 +37,8 @@ public class ContactsPage extends TestBase{
 	@FindBy(xpath = "//strong[contains(.,'Name')]")
 	WebElement nameLabel;
 	
+	@FindBy(xpath = "//i[@title='Delete' and @class='fa fa-trash-o']")
+	WebElement deleteBinIcon;
 	//Initializing the Page Objects
 	public ContactsPage() {  //constructor
 		
@@ -52,8 +54,8 @@ public class ContactsPage extends TestBase{
 		return newContactFormTitle.isDisplayed();
 	}
 	
-	public void selectContactsByName(String name) {
-		driver.findElement(By.xpath("//a[contains(text(),'" + name + "')]/parent::td//preceding-sibling::td//input[@name='contact_id']")).click();
+	public boolean selectContactsByName(String name) {
+		return driver.findElement(By.xpath("//a[contains(text(),'" + name + "')]/parent::td//preceding-sibling::td//input[@name='contact_id']")).isDisplayed();   //click();
 
 	}
 	
@@ -74,4 +76,7 @@ public class ContactsPage extends TestBase{
 		return nameLabel.isDisplayed();
 	}
 	
+	public void deleteContactByDeleteBinIcon() {
+		deleteBinIcon.click();
+	}
 }

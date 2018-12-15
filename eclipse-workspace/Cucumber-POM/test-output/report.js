@@ -110,11 +110,16 @@ formatter.step({
 });
 formatter.step({
   "line": 26,
+  "name": "delete new contact \"\u003cfname\u003e\" and \"\u003clname\u003e\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 27,
   "name": "tear down",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 28,
+  "line": 29,
   "name": "",
   "description": "",
   "id": "new-contact;free-crm-app-with-parameters-pom-test;",
@@ -126,7 +131,7 @@ formatter.examples({
         "lname",
         "comp"
       ],
-      "line": 29,
+      "line": 30,
       "id": "new-contact;free-crm-app-with-parameters-pom-test;;1"
     },
     {
@@ -136,7 +141,7 @@ formatter.examples({
         "ff2",
         "gg3"
       ],
-      "line": 30,
+      "line": 31,
       "id": "new-contact;free-crm-app-with-parameters-pom-test;;2"
     },
     {
@@ -146,14 +151,14 @@ formatter.examples({
         "ff5",
         "gg6"
       ],
-      "line": 31,
+      "line": 32,
       "id": "new-contact;free-crm-app-with-parameters-pom-test;;3"
     }
   ],
   "keyword": "Examples"
 });
 formatter.scenario({
-  "line": 30,
+  "line": 31,
   "name": "free CRM app with parameters POM test",
   "description": "",
   "id": "new-contact;free-crm-app-with-parameters-pom-test;;2",
@@ -192,6 +197,15 @@ formatter.step({
 });
 formatter.step({
   "line": 26,
+  "name": "delete new contact \"ee1\" and \"ff2\"",
+  "matchedColumns": [
+    1,
+    2
+  ],
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 27,
   "name": "tear down",
   "keyword": "Then "
 });
@@ -199,14 +213,14 @@ formatter.match({
   "location": "NewContact_POMStepDefinition.user_logged_in_and_is_on_home_page()"
 });
 formatter.result({
-  "duration": 19227560047,
+  "duration": 18768489181,
   "status": "passed"
 });
 formatter.match({
   "location": "NewContact_POMStepDefinition.user_hover_over_contacts_link_and_clicks_on_New_Contact_link()"
 });
 formatter.result({
-  "duration": 2352560981,
+  "duration": 1761267325,
   "status": "passed"
 });
 formatter.match({
@@ -231,7 +245,7 @@ formatter.match({
   "location": "NewContact_POMStepDefinition.user_enters_and_Names(String,String,String,String)"
 });
 formatter.result({
-  "duration": 2514119494,
+  "duration": 2282670720,
   "status": "passed"
 });
 formatter.match({
@@ -248,18 +262,35 @@ formatter.match({
   "location": "NewContact_POMStepDefinition.verify_new_contact_and_created(String,String)"
 });
 formatter.result({
-  "duration": 1112348575,
+  "duration": 948414653,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "ee1",
+      "offset": 20
+    },
+    {
+      "val": "ff2",
+      "offset": 30
+    }
+  ],
+  "location": "NewContact_POMStepDefinition.delete_new_contact(String,String)"
+});
+formatter.result({
+  "duration": 188850511,
   "status": "passed"
 });
 formatter.match({
   "location": "NewContact_POMStepDefinition.tear_down()"
 });
 formatter.result({
-  "duration": 664597748,
+  "duration": 656429835,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 31,
+  "line": 32,
   "name": "free CRM app with parameters POM test",
   "description": "",
   "id": "new-contact;free-crm-app-with-parameters-pom-test;;3",
@@ -298,6 +329,15 @@ formatter.step({
 });
 formatter.step({
   "line": 26,
+  "name": "delete new contact \"ee4\" and \"ff5\"",
+  "matchedColumns": [
+    1,
+    2
+  ],
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 27,
   "name": "tear down",
   "keyword": "Then "
 });
@@ -305,14 +345,14 @@ formatter.match({
   "location": "NewContact_POMStepDefinition.user_logged_in_and_is_on_home_page()"
 });
 formatter.result({
-  "duration": 17333422901,
+  "duration": 17109557051,
   "status": "passed"
 });
 formatter.match({
   "location": "NewContact_POMStepDefinition.user_hover_over_contacts_link_and_clicks_on_New_Contact_link()"
 });
 formatter.result({
-  "duration": 2792281511,
+  "duration": 1815751958,
   "status": "passed"
 });
 formatter.match({
@@ -337,7 +377,7 @@ formatter.match({
   "location": "NewContact_POMStepDefinition.user_enters_and_Names(String,String,String,String)"
 });
 formatter.result({
-  "duration": 2155965670,
+  "duration": 2141023272,
   "status": "passed"
 });
 formatter.match({
@@ -354,14 +394,31 @@ formatter.match({
   "location": "NewContact_POMStepDefinition.verify_new_contact_and_created(String,String)"
 });
 formatter.result({
-  "duration": 1269279429,
+  "duration": 1101349952,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "ee4",
+      "offset": 20
+    },
+    {
+      "val": "ff5",
+      "offset": 30
+    }
+  ],
+  "location": "NewContact_POMStepDefinition.delete_new_contact(String,String)"
+});
+formatter.result({
+  "duration": 186489099,
   "status": "passed"
 });
 formatter.match({
   "location": "NewContact_POMStepDefinition.tear_down()"
 });
 formatter.result({
-  "duration": 670319812,
+  "duration": 648477911,
   "status": "passed"
 });
 formatter.uri("freeCRM.feature");
@@ -488,42 +545,42 @@ formatter.match({
   "location": "HomePageSteps.user_opens_browser()"
 });
 formatter.result({
-  "duration": 10166074214,
+  "duration": 6707358352,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePageSteps.user_is_on_Login_Page()"
 });
 formatter.result({
-  "duration": 11279454,
+  "duration": 10037637,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePageSteps.user_logs_into_app()"
 });
 formatter.result({
-  "duration": 10903073848,
+  "duration": 10969458378,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePageSteps.validate_home_page_title()"
 });
 formatter.result({
-  "duration": 20000167,
+  "duration": 16894224,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePageSteps.validate_logged_user_name()"
 });
 formatter.result({
-  "duration": 151070706,
+  "duration": 140704188,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePageSteps.browser_down()"
 });
 formatter.result({
-  "duration": 644722602,
+  "duration": 649548990,
   "status": "passed"
 });
 });

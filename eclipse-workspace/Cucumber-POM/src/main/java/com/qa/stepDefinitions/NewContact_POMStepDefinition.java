@@ -1,6 +1,8 @@
 package com.qa.stepDefinitions;
 
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
 
 import com.qa.pages.ContactsPage;
@@ -62,9 +64,23 @@ public class NewContact_POMStepDefinition extends TestBase {
 		contactspage.clickContactsTab();
 		String name = ftName + " " + ltName;
 		System.out.println("new contact name is: "+ name);
-		contactspage.selectContactsByName(name);
+		boolean flag = contactspage.selectContactsByName(name);
+		Assert.assertTrue(flag);
 	}
 
+	@Then("^delete new contact \"([^\"]*)\" and \"([^\"]*)\"$")
+	public void delete_new_contact(String ftName, String ltName) {
+		String bName = ftName + " " + ltName;
+		if(contactspage.selectContactsByName(bName))  {
+			driver.findElement(By.xpath("(//a[contains(text(),'" +bName+ "')]//parent::td//following-sibling::td)//a/i[@title='Delete']")).click();
+			Alert alert = driver.switchTo().alert();
+			System.out.println(alert.getText());
+			alert.accept();
+		}else {
+			System.out.println("either no such name or no alert"); 
+		}
+	}
+	
 	@Then("^tear down$")
 	public void tear_down() {
 		driver.quit();
